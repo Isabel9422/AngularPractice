@@ -1,0 +1,50 @@
+<div class="container mt-3">
+    <h1 class="mb-4">Exercise 1</h1>
+    <div class="row m-5 d-inline">
+        <label class="p-1 mx-5" style="width: 130px;" id="dataUser">Write your name:</label>
+        <input style="width: 200px;" type="text" [(ngModel)]="name">
+        <button type="button" class="p-1 btn btn-outline-dark mx-5" style="width: 100px;" (click)="hello()">Submit</button>
+      </div>
+    <div class="my-5 card text-white bg-dark">
+      <div class="card-body">
+        <h2 [ngStyle]="{'font-size.px':fontSize, 'font-family': fontFamily, 'text-align': alignment}"> {{greeting}} </h2>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-3">
+          <h4>What font family do you prefer?</h4>
+        </div>
+        <div class="col-4">
+          <div class="dropdown dropend">
+            <button class="btn btn-outline-dark dropdown-toggle mt-2 mb-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Font-family
+            </button>          
+            <div class="dropdown-menu">
+              <a class="dropdown-item" (click)="changeFont(1)">Font-family 1</a>
+              <a class="dropdown-item" (click)="changeFont(2)">Font-family 2</a>
+              <a class="dropdown-item" (click)="changeFont(3)">Font-family 3</a>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+          <h4>Write a number to modify the size of the text.</h4>
+              <input type="text" [(ngModel)]="size">
+            <button type="button" class="btn btn-outline-dark p-1 px-2 mx-4" (click)="changeSize()">Submit</button>
+        </div>
+      </div>
+        <h4 class="mt-5">And finally, which alignment do you prefer?</h4>
+        <div class="row mt-4">
+        <div class="col">
+          <label>Left</label>
+          <input class="w-25" type="checkbox" (click)="changeAlignment(1)" [checked]=checked1>
+        </div>
+        <div class="col">
+          <label>Center</label>
+          <input class="w-25" type="checkbox" (click)="changeAlignment(2)" [checked]=checked2>
+        </div>
+        <div class="col">
+          <label>Right</label>
+          <input class="w-25" type="checkbox" (click)="changeAlignment(3)" [checked]=checked3>
+        </div>
+      </div>
+  </div>

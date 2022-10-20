@@ -1,0 +1,15 @@
+import { Component, NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { GreetingComponent } from './greeting/greeting.component';
+
+const routes: Routes = [
+  {path: '', component: GreetingComponent},
+  {path: 'calculator', component: GreetingComponent},
+  {path: 'greeting', component: GreetingComponent},
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

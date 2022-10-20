@@ -1,0 +1,45 @@
+<div class="container m-5">
+    <h1>Exercise 2</h1>
+    <div class="h-100 d-flex align-items-center justify-content-center">
+    <table class="table table-bordered table-dark text-center w-25 m-5">
+        <thead>
+            <tr>
+              <th colspan="4"><p>{{a}}{{operator}}{{b}}</p></th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <td (click)="number1()">1</td>
+            <td (click)="number2()">2</td>
+            <td (click)="number3()">3</td>
+            <td (click)="addOp()">+</td>
+          </tr>
+          <tr>
+            <td (click)="number4()">4</td>
+            <td (click)="number5()">5</td>
+            <td (click)="number6()">6</td>
+            <td (click)="subOp()">-</td>
+          </tr>
+          <tr>
+            <td (click)="number7()">7</td>
+            <td (click)="number8()">8</td>
+            <td (click)="number9()">9</td>
+            <td (click)="mulOp()">*</td>
+          </tr>
+          <tr>
+            <td (click)="comma()">.</td>
+            <td (click)="number0()">0</td>
+            <td (click)="divOp()">/</td>
+            <td (click)="operation()">=</td>
+          </tr>
+          <tr>
+            <td colspan="4" (click)="clear()">Clear</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="my-5 card text-white bg-dark w-25">
+        <div class="card-body">
+            <p>{{msg}} {{result}}</p>
+        </div>
+      </div>
+</div>

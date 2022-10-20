@@ -1,0 +1,37 @@
+h1, p, label {
+    font-family: 'Barlow', sans-serif;
+}
+
+p, label {
+    font-size: 15px;
+}
+
+#dataUser{
+    background-color: rgba(173, 93, 172, 0.162);
+    color: black;
+    font-weight: 700;
+    border-style: groove;
+    border-radius: 10px;
+    border-color: rgba(87, 87, 132, 0.324);
+}
+
+.dropdown-menu a:hover {background-color: rgb(5, 3, 3); color: white;}
+
+.font-family1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.font-family2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-family3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card{
+    border-radius: 25px;
+    background: linear-gradient(225deg, #2e2e2e, #272727);
+    box-shadow:  -5px 5px 10px #252525,
+                 5px -5px 10px #313131;
+}

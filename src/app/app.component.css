@@ -1,0 +1,17 @@
+.nav-link{
+    color:  #b2b2b2;
+}
+
+.navbar a:hover{
+  color: white;
+}
+
+.navbar,
+.navbar {
+  background-color: #cbbcb1;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}

@@ -1,0 +1,11 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+body {
+    background-position: center;
+    background-color: #000000;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #cca6ef 100%);
+    height: 100%;
+}
