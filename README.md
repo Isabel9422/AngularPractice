@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
+It consists of three different exercises, the first one consists in an app in which you could write your name and the app is going to greet you through a text which you can modify their font size, font family or even the alignment of the text.
+
+Probably, you use a calculator at the time to solve an operation, so with the exercise 2 of this app you'll never have to waste time open calculator app of your phone or computer ! Besides it has a pretty design which will catch your child's attention so as to ease doing their maths homework.
+
+Last but not least, the third exercise is a simulator of a bank transaction report in which you could sort transactions depending on different criteria and take a look of the details of each transaction.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
