@@ -1,22 +1,55 @@
-.nav-link{
-    color:  #9d0505;
-}
-
-.navbar-scroll .nav-link,
-.navbar-scroll .navbar-toggler-icon,
-.navbar-scroll .navbar-brand {
+.navbar .navbar-nav a:hover {
   color: #fff;
 }
 
-.navbar-scrolled .nav-link,
-.navbar-scrolled .navbar-toggler-icon,
-.navbar-scrolled .navbar-brand {
-  color: #fff;
+.navbar-nav a {
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
-.navbar-scroll,
-.navbar-scrolled {
-  background-color: #cbbcb1;
+.navbar-nav a span {
+  transition: transform 0.2s ease-out;
+}
+
+.navbar-nav a span:first-child {
+  display: inline-block;
+  padding: 10px;
+}
+
+.navbar-nav a span:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+}
+
+.navbar-nav i {
+  font-size: 30px;
+}
+
+.navbar-nav a:hover span:first-child {
+  transform: translateY(100%);
+}
+
+.navbar-nav a:hover span:last-child,
+.navbar-nav[data-animation] a:hover span:last-child {
+  transform: none;
+}
+
+.navbar .navbar-nav a,
+.navbar .navbar-nav a:after,
+.navbar .navbar-nav a:before {
+  transition: all .5s;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 1.1em;
 }
 
 .navbar-brand {
