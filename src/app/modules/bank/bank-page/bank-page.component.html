@@ -1,0 +1,94 @@
+<div class="container mt-3">
+    <h1 class="my-4">Exercise 3</h1>
+    <button type="button" class="btn btn-danger mx-3" (click)="showElements(1)">Deposit</button>
+    <button type="button" class="btn btn-danger mx-3" (click)="showElements(2)">Transfer</button>
+    <button type="button" class="btn btn-danger mx-3" (click)="showElements(3)">Create account</button>
+    <button type="button" class="btn btn-danger mx-3" (click)="showElements(4)">Withdrawal</button>
+    <div  [ngStyle]="{'display':hidden1}" class="row align-items-center justify-content-center">
+    <div class="card my-5 text-white bg-dark justify-content-center align-items-center" id="card">
+        <h3 class="my-4">Make a deposit</h3>
+        <hr class="border w-75 danger">
+        <div class="card-body text-start border border-danger p-4 m-4" id="card">
+            <div class="row">
+                <label>Select your account:</label>
+                <select class="p-1 w-25 m-5" name="accounts" id="accounts">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                <label>Amount:</label>
+                <input class="w-25 m-5" type="number">
+                <button type="button" class="btn btn-outline-danger w-25 p-2 m-5">Submit</button>
+            </div>
+      </div>
+      <span class="my-4"></span>
+    </div>
+</div>
+    <div [ngStyle]="{'display':hidden2}" class="row align-items-center justify-content-center">
+        <div class="card my-5 text-white bg-dark justify-content-center align-items-center" id="card">
+            <h3 class="my-4">Make a transfer</h3>
+            <hr class="border w-75 danger">
+            <div class="card-body text-start border border-danger p-4 m-4" id="card">
+                <div class="row">
+                    <label>Select your account:</label>
+                    <select class="p-1 w-25 m-5" name="accounts" id="accounts">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                <label>Amount:</label>
+                <input class="w-25 m-5" type="number">
+                <button type="button" class="btn btn-outline-danger w-25 p-2 m-5">Submit</button>
+            </div>
+        </div>
+        <span class="my-4"></span>
+    </div>
+</div>
+
+    <div [ngStyle]="{'display':hidden3}" class="row align-items-center justify-content-center">
+        <div class="card my-5 text-white bg-dark justify-content-center align-items-center" id="card">
+            <h3 class="my-4">Create an account</h3>
+            <hr class="border w-75 danger">
+            <div class="card-body text-start border border-danger p-4 m-4" id="card">
+                <div class="row">
+                    <label>Select your account:</label>
+                    <select class="p-1 w-25 m-5" name="accounts" id="accounts">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </select>
+                    <label>Amount:</label>
+                    <input class="w-25 m-5" type="number">
+                    <button type="button" class="btn btn-outline-danger w-25 p-2 m-5">Submit</button>
+                </div>
+            </div>
+            <span class="my-4"></span>
+        </div>
+    </div>
+
+
+    <div [ngStyle]="{'display':hidden4}" class="row align-items-center justify-content-center">
+        <div class="card my-5 text-white bg-dark justify-content-center align-items-center" id="card">
+            <h3 class="my-4">Withdrawal</h3>
+            <hr class="border w-75 danger">
+            <div class="card-body text-start border border-danger p-4 m-4" id="card">
+                <div class="row">
+                    <label>Select your account:</label>
+                    <select class="p-1 w-25 m-5" name="accounts" id="accounts">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </select>
+                    <label>Amount:</label>
+                    <input class="w-25 m-5" type="number">
+                    <button type="button" class="btn btn-outline-danger w-25 p-2 m-5">Submit</button>
+                </div>
+            </div>
+            <span class="my-4"></span>
+        </div>
+</div>
+</div>

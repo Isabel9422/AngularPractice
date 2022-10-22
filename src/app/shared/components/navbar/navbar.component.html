@@ -1,15 +1,14 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container">
-            <a class="navbar-brand" href="#!"><span style="color: #9d0505;">Angular</span></a>
+            <a class="navbar-brand"><span style="color: #9d0505;">Angular</span></a>
               <ul class="navbar-nav me-auto mx-3">
-                <li class="nav-item" *ngFor="let item of linksMenu">
-                    <a class="nav-link" href="#!">
+                <li class="nav-item" [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
+                    <a class="nav-link">
                       <span>{{item.name}}</span>
                       <span>
-                        <i class="uil {{item.icon}}" aria-hidden="true"></i>
+                        <i [ngClass]="['uil' ,item.icon]"></i>
                       </span>
                     </a>
-                    <!-- <hr class="line"> -->
                 </li>
               </ul>
             </div>

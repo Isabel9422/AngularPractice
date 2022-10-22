@@ -7,29 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-
-  linksMenu: Array<any> = [
-    {
-      name: 'Home',
-      icon: 'uil-estate'
-    },
-    {
-      name: 'Greeting',
-      icon: 'uil-comment-dots'
-    },
-    {
-      name: 'Calculator',
-      icon: 'uil-calculator-alt'
-    },
-    {
-      name: 'Bank transactions',
-      icon: 'uil-invoice'
-    }
-  ]
+  mainMenu: { defaultOptions: Array<any>, accessLink: Array<any>
+  } = { defaultOptions: [], accessLink: [] }
 
   constructor() { }
 
   ngOnInit(): void {
+    this.mainMenu.defaultOptions = [
+      {
+        name: 'Home',
+        icon: 'uil-estate',
+        router: ['/', 'home']
+      },
+      {
+        name: 'Greeting',
+        icon: 'uil-comment-dots',
+        router: ['/', 'greeting']
+      },
+      {
+        name: 'Calculator',
+        icon: 'uil-calculator-alt',
+        router: ['/', 'calculator']
+      },
+      {
+        name: 'Bank transactions',
+        icon: 'uil-invoice',
+        router: ['/', 'transactions']
+      }
+    ]
   }
 
 }

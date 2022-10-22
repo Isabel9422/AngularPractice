@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-greeting',
-  templateUrl: './greeting.component.html',
-  styleUrls: ['./greeting.component.css']
+  templateUrl: './greetingPage.component.html',
+  styleUrls: ['./greetingPage.component.css']
 })
-export class GreetingComponent implements OnInit {
+export class GreetingPageComponent implements OnInit {
   
   title = 'Exercise1';
   name = '';
@@ -17,6 +17,7 @@ export class GreetingComponent implements OnInit {
   checked1:boolean=false;
   checked2:boolean=false;
   checked3:boolean=false;
+  repeatedNumber:number=0;
 
   constructor() { }
 
@@ -48,31 +49,33 @@ export class GreetingComponent implements OnInit {
       }
   }
 
-  changeAlignment(align:number){
-  switch (align) {
+  changeAlignment(option:number){
+
+    if(this.repeatedNumber==option){option=4;}
+    this.repeatedNumber = option;
+
+  switch (option) {
     case 1:
-      if(!this.checked1){ 
         this.alignment='left'
         this.checked1=true;
         this.checked2=this.checked3=false;
-      }else{this.checked1=false;}       //In the case user unselect any of the checkboxes
       break;
     case 2:
-      if(!this.checked2){
         this.alignment='center'
         this.checked1=this.checked3=false;
         this.checked2=true;
-      }else{this.checked2=false;}
       break;
     case 3:
-      if(!this.checked3){
         this.alignment='right'
         this.checked1=this.checked2=false;
         this.checked3=true;
-      }else{this.checked3=false}
+      break;
+    default:
+      this.alignment='left'
+      this.checked2=this.checked3=false;
       break;
   }
-  if(!this.checked2&&!this.checked3){this.alignment='left'}   //If user unselect center or right checkbox, text-alignment will be left by default
+
 }
   
 }

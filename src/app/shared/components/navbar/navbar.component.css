@@ -1,5 +1,6 @@
 .navbar .navbar-nav a:hover {
   color: #fff;
+  cursor: pointer;
 }
 
 .navbar-nav a {

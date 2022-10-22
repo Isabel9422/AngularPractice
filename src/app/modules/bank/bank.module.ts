@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HistoryRoutingModule } from './history-routing.module';
-import { HistoryPageComponent } from './pages/history-page/history-page.component';
+import { BankRoutingModule } from './bank-routing.module';
+import { BankPageComponent } from './bank-page/bank-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    HistoryPageComponent
+    BankPageComponent
   ],
   imports: [
     CommonModule,
-    HistoryRoutingModule,
+    BankRoutingModule,
     SharedModule
   ]
 })
-export class HistoryModule { }
+export class BankModule { }

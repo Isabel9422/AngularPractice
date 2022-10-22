@@ -1,7 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GreetingComponent } from './greeting/greeting.component';
-import { HomeModule } from './modules/home/home.module';
 import { HomePageComponent } from './modules/home/pages/home-page/home-page.component';
 
 const routes: Routes = [
@@ -9,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: HomePageComponent,
     loadChildren:() => import(`./modules/home/home.module`).then(m => m.HomeModule)
+  },
+  {
+    path: 'auth',
+    loadChildren:() => import(`./modules/auth/auth.module`).then(m => m.AuthModule)
   }
 ];
 

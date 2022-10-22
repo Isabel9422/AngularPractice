@@ -1,0 +1,12 @@
+#card{
+    width: 70%;
+    height: 100%;
+}
+
+.container{
+    font-family: 'Barlow', sans-serif;
+}
+
+.row{
+    font-size: 18px;
+}
