@@ -1,0 +1,19 @@
+{
+    "data" :[
+        {
+            "id":"1", "type":"deposit", "amount":500, "createdAt":"Mon Jan 24 2022 11:12:58 GMT+0100"},
+        {
+        
+            "id":"2", "type":"withdrawal", "amount":830, "createdAt":"Fri Apr 01 2022 15:12:52 GMT+0200"},
+        {
+        
+            "id":"3", "type":"transfer", "amount":150, "createdAt":"Fri Mar 05 2021 07:12:53 GMT+0100"},
+
+        {
+    
+            "id":"4", "type":"withdrawal", "amount":325, "createdAt":"Sun May 16 2021 15:12:27 GMT+0200"},
+        {
+        
+            "id":"5", "type":"transfer", "amount":3250, "createdAt":"Sun Jul 17 2022 18:07:47 GMT+0200"}
+    ]
+}

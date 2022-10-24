@@ -1,12 +1,23 @@
-#card{
-    width: 70%;
-    height: 100%;
-}
-
 .container{
     font-family: 'Barlow', sans-serif;
 }
 
-.row{
-    font-size: 18px;
+label{
+    font-size: 16px;
+}
+
+.buttonOptions{
+    font-size: 16px;
+}
+
+button{
+    font-size: 16px;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+tr:hover{
+    cursor: pointer;
 }

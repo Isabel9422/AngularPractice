@@ -1,0 +1,12 @@
+{
+    "data" :[
+        {
+            "name":"First Account", "iban":"ES098765", "swiftCode":"121q32kj", "balance":500, "country":"Canada", "transactions": []},
+        {
+        
+            "name":"Second Account", "iban":"ES34567", "swiftCode":"877jmu", "balance":0, "country":"Madagascar", "transactions": []},
+        {
+        
+            "name":"Third Account", "iban":"ES345678", "swiftCode":"32frf34", "balance":0, "country":"Sweden", "transactions": []}
+    ]
+}
