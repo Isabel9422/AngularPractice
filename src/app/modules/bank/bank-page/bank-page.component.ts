@@ -23,12 +23,12 @@ export class BankPageComponent implements OnInit {
   optionSort: { property: string | null, order: string } = { property: null, order: 'asc' }
 
   accounts:Array<Account>= new Array();
-  hidden1:string = 'flex'
+  hidden1:string = 'none'
   hidden2:string = 'none'
   hidden3:string = 'none'
   hidden4:string = 'none'
   hidden5:string = 'none'
-  hidden6:string = 'none'
+  hidden6:string = 'flex'
   hidden7:string = 'none'
 
   nameAccount:string=''
@@ -44,8 +44,8 @@ export class BankPageComponent implements OnInit {
   transactions:Array<Transaction>= new Array();
   transaction:Transaction= new Transaction(0,TransactionType.deposit,0,new Date);
   details: Details = new Details(0,'');
-  id:number=this.transactionsList.length
-  idTransaction: number=2;
+  // id:number=this.transactionsList.length
+  // idTransaction: number=2;
   sortedItems: any;
 
   constructor(private bankService: BankService) { }
@@ -71,6 +71,7 @@ export class BankPageComponent implements OnInit {
           this.transactionType=TransactionType.withdrawal
           this.details= new Details(this.DetailsList.length+1,this.concept)
           this.transaction = new Transaction(this.transactionsList.length+1,this.transactionType,this.amount, new Date())
+          this.DetailsList.push(this.details)
           e.transactions.push(this.transaction)
           this.transactionsList.push(this.transaction)
         }else{alert('You have not enough credit in your account.')}
@@ -86,7 +87,9 @@ export class BankPageComponent implements OnInit {
         e.balance+=this.amount
         this.transactionType=TransactionType.deposit
         this.details= new Details(this.DetailsList.length+1,this.concept)
+        console.log(this.DetailsList.length+1)
         this.transaction = new Transaction(this.transactionsList.length+1,this.transactionType,this.amount, new Date())
+        this.DetailsList.push(this.details)
         e.transactions.push(this.transaction)
         this.transactionsList.push(this.transaction)
       }
@@ -110,11 +113,12 @@ export class BankPageComponent implements OnInit {
           this.transactionType=TransactionType.transfer
           this.details= new Details(this.DetailsList.length+1,this.concept)
           this.transaction = new Transaction(this.transactionsList.length+1,this.transactionType,this.amount, new Date())
+          this.DetailsList.push(this.details)
           e.transactions.push(this.transaction)
           this.transactionsList.push(this.transaction)
         }
     });
-    this.accounts.forEach(e => {
+    this.accountsList.forEach(e => {
       if(e.name===this.nameAccountDestination){
         e.balance+=this.amount
       }
@@ -162,9 +166,6 @@ export class BankPageComponent implements OnInit {
     var account = new Account(this.name, this.iban, this.swiftCode, this.country, this.balance, this.transactions);
     this.accountsList.push(account);
     alert('Account has been created!')
-    this.accountsList.forEach(e => {
-      console.log(e)
-    });
     this.resetData()
   }
 
